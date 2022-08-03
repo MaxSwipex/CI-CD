@@ -1,6 +1,3 @@
-const request = require("supertest");
-
-// importing express framework
 const express = require("express");
 
 const app = express();
