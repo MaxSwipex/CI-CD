@@ -1,7 +1,26 @@
 version: '2.1'
 services:
+  database:
+    container_name: database
+    image: postgres:14.1
+    volumes:
+      - ./data/database:/var/lib/postgresql/data
+    networks:
+      - cicd
+    environment:
+      POSTGRES_USER: '${POSTGRES_USER}'
+      POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
+      POSTGRES_DB: '${POSTGRES_DB}'
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    ports:
+      - ${POSTGRES_PORT}:5432
+
   node-cicd:
     container_name: node-cicd
+    networks:
+      - cicd
+    depends_on:
+      - database
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,3 +29,5 @@ services:
 
     environment:
       PORT: '${PORT}'
+networks:
+  cicd:
