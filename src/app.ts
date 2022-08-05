@@ -27,9 +27,12 @@ const main = async () => {
 
 main()
 
-const app = express();
-
+export const app = express();
 app.get("/test", function (req, res) {
+    return res.send(`Hello World`);
+})
+
+app.get("/testDB", function (req, res) {
     return res.send(`Hello World, ${test}`);
 });
 
@@ -38,4 +41,3 @@ app.listen(process.env.PORT || 7000, () => {
     console.log("Server is running");
 });
 
-module.exports = app;

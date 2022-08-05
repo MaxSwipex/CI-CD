@@ -1,4 +1,5 @@
-const app = require("../app");
+import {app} from "../app";
+
 const request = require('supertest');
 
 describe("GET /", () => {
