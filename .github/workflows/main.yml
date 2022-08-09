@@ -42,7 +42,7 @@ jobs:
         id: deploy
         run: |
           aws deploy create-deployment \
-          --application-name Git_Application \
-            --deployment-group-name development_gropup \
-            --deployment-config-name CodeDeployDefault.OneAtATime \
-            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
+          --application-name CICD-Docker-depl \
+          --deployment-group-name CICD-Docker-depl-group \
+          --deployment-config-name CodeDeployDefault.OneAtATime \
+          --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
