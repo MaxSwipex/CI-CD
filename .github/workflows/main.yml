@@ -41,6 +41,7 @@ jobs:
           aws-region: eu-north-1
       - name: Create CodeDeploy Deployment
         id: deploy
+
         run: |
           aws deploy create-deployment \
             --application-name CICD-Docker-depl \
