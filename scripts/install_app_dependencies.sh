@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo ls
+sudo cd app/
 sudo docker-compose up
