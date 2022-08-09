@@ -28,7 +28,7 @@ const main = async () => {
 main()
 
 export const app = express();
-app.get("/test", function (req, res) {
+app.get("/", function (req, res) {
     return res.send(`Hello World`);
 })
 
