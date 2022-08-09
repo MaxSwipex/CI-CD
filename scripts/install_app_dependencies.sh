@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash -x
 sudo su -
-sudo cd ~
+sudo cd ~/home/
 sudo ls
 
 sudo docker-compose up
