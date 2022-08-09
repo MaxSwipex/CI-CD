@@ -39,10 +39,11 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: eu-north-1
+      - name: Create CodeDeploy Deployment
         id: deploy
         run: |
           aws deploy create-deployment \
-          --application-name CICD-Docker-depl \
-          --deployment-group-name CICD-Docker-depl-group \
-          --deployment-config-name CodeDeployDefault.OneAtATime \
-          --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
+            --application-nameCICD-Docker-depl \
+            --deployment-group-name CICD-Docker-depl-group \
+            --deployment-config-name CodeDeployDefault.OneAtATime \
+            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
