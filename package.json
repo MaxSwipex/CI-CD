@@ -18,16 +18,14 @@
     "url": "https://github.com/MaxSwipex/CI-CD/issues"
   },
   "homepage": "https://github.com/MaxSwipex/CI-CD#readme",
-  "dependencies": {
-    "express": "^4.18.1",
-    "typeorm": "^0.3.7"
-  },
   "devDependencies": {
     "@types/mocha": "^9.1.1",
     "@types/node": "^18.6.4",
+    "express": "^4.18.1",
     "mocha": "^10.0.0",
     "supertest": "^6.2.4",
     "ts-node": "^10.9.1",
+    "typeorm": "^0.3.7",
     "typescript": "^4.7.4"
   }
 }
