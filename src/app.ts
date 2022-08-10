@@ -36,8 +36,8 @@ app.get("/testDB", function (req, res) {
     return res.send(`Hello World, ${test}`);
 });
 
-
-app.listen(process.env.PORT || 7000, () => {
-    console.log("Server is running");
+const port= process.env.PORT || 7000
+app.listen(port, () => {
+    console.log(`Server is running ${port}`);
 });
 
