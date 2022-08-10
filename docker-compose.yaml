@@ -7,6 +7,8 @@ services:
       - ./data/database:/var/lib/postgresql/data
     networks:
       - cicd
+    env_file:
+      - .env
     environment:
       POSTGRES_USER: '${POSTGRES_USER}'
       POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
@@ -26,7 +28,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - ${PORT}:3000
-
+    env_file:
+      - .env
     environment:
       PORT: '${PORT}'
 networks:
