@@ -1,6 +1,3 @@
 #!/bin/bash -x
-sudo su -
-sudo cd ~/home/
-sudo ls
-
+cd /home/ec2-user/app/
 sudo docker-compose up
